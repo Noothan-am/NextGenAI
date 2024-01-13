@@ -2,8 +2,6 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import PromptInputField from "../components/PromptInputField";
 import VideoContainer from "../components/VideoContainer";
-import Login from "./Login";
-import Signup from "./Signup";
 import VideoGroup from "../components/VideoGroup";
 import styles from "../styles/home.module.css";
 
