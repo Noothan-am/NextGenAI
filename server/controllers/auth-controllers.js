@@ -1,5 +1,4 @@
 const userInfo = require("../model/UserInfoSchema");
-const TransactionSchema = require("../model/TransactionSchema");
 
 const userLogin = async (req, res) => {
   try {
