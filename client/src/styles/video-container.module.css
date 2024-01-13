@@ -2,9 +2,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 200px;
-  height: 200px;
+  width: 400px;
+  height: 250px;
   background-color: #333;
   color: white;
   border-radius: 10px;
+  margin-top: 2rem;
+}
+
+.video-placeholder p {
+  font-size: 1.7rem;
 }

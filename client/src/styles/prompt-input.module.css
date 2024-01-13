@@ -4,6 +4,8 @@
   align-items: center;
   background-color: #000;
   padding: 10px 50px;
+  width: 60%;
+  margin: auto;
 }
 
 .input-field > input {

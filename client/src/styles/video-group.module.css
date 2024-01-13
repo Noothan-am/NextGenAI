@@ -1,9 +1,9 @@
 .video-placeholders {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  background-color: #000;
-  padding: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .video-placeholder {
