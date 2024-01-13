@@ -1,0 +1,31 @@
+.home {
+  background-color: black;
+  color: white;
+  min-height: 100vh;
+}
+
+.hero {
+  width: 80%;
+  text-align: center;
+  margin: auto;
+}
+.hero > p {
+  width: 60%;
+  margin: auto;
+  font-size: 0.8rem;
+}
+
+.home-prompt {
+  margin: 3rem auto;
+}
+
+.home-video-group {
+  width: 80%;
+  margin: auto;
+}
+
+.sample-video {
+  width: 90%;
+  margin: auto;
+  margin-top: 4rem;
+}
