@@ -12,7 +12,7 @@ function GenerateVideo() {
   const handleButtonClick = async () => {
     try {
       const response = await axios.post(
-        "https://0bad-34-141-138-21.ngrok-free.app/api/generate-video/",
+        "https://61b9-34-123-231-129.ngrok-free.app /api/generate-video/",
         {
           prompt: `${prompt}`,
         },

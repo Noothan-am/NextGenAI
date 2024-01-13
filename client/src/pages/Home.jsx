@@ -7,16 +7,18 @@ const video1 = require("../assets/Dog.mp4");
 const video2 = require("../assets/women.mp4");
 const video3 = require("../assets/cat.mp4");
 const video4 = require("../assets/hero.mp4");
+const video5 = require("../assets/monkey.mp4");
+const video6 = require("../assets/student.mp4");
 
 function Home() {
-  const data = [video1, video2, video3, video4];
+  const data = [video4, video1, video3, video2, video5, video6];
   return (
     <div className={styles["home"]}>
       <Navbar />
       <section className={styles["hero"]}>
         <h1>Revolutionizing Content Creation through Innovative AI Models</h1>
         <div className={styles["home-prompt"]}>
-          <PromptInputField />
+          {/* <PromptInputField /> */}
         </div>
         <p>
           Create awe-inspiring masterpieces effortlessly and explore the endless

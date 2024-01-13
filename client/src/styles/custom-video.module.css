@@ -1,5 +1,5 @@
 .custom-video {
-  /* min-height: 100vh; */
+  min-height: 100vh;
   background-color: black;
   color: white;
 }
@@ -41,7 +41,6 @@
 .generated-video {
   width: 90%;
   margin: auto;
-  height: 40rem;
   font-size: 1.5rem;
   font-weight: bold;
   font-family: "Inter", sans-serif;
