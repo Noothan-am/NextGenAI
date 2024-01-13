@@ -12,9 +12,9 @@ function GenerateVideo() {
   const handleButtonClick = async () => {
     try {
       const response = await axios.post(
-        "https://61b9-34-123-231-129.ngrok-free.app /api/generate-video/",
+        "https://c25f-34-170-146-209.ngrok-free.app/api/generate-video/",
         {
-          prompt: `${prompt}`,
+          prompt: prompt,
         },
         {
           responseType: "json",

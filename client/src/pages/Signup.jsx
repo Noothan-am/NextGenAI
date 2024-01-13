@@ -16,21 +16,23 @@ function Signup() {
 
   return (
     <div className={styles["input-fields"]}>
-      <p className={styles["login-heading"]}>Sign Up</p>
-      <input
-        type="email"
-        placeholder="Enter your email"
-        value={email}
-        onChange={handleEmailChange}
-      />
-      <input
-        type="password"
-        placeholder="Enter your password"
-        value={password}
-        onChange={handlePasswordChange}
-      />
-      <Button />
-      <p>Already have Account? Login here</p>
+      <div className={styles["login-container"]}>
+        <p className={styles["login-heading"]}>Sign Up</p>
+        <input
+          type="email"
+          placeholder="Enter your email"
+          value={email}
+          onChange={handleEmailChange}
+        />
+        <input
+          type="password"
+          placeholder="Enter your password"
+          value={password}
+          onChange={handlePasswordChange}
+        />
+        <Button />
+        <p>Already have Account? Login here</p>
+      </div>
     </div>
   );
 }
