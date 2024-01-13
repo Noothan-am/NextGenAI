@@ -9,7 +9,6 @@ const userLogin = async (req, res) => {
     if (!user) {
       return res.status(404).json({ message: "user not found" });
     }
-    // const isValid = await bcrypt.compare(password, user.password);
     if (!(password === user.password)) {
       return res.status(401).json({ message: "invalid credentials" });
     }
@@ -24,26 +23,6 @@ const userLogin = async (req, res) => {
   }
 };
 
-const getLogin = async (req, res) => {
-  // const d = new userInfo({
-  //   user_id: "m7p006fa6d4c704caca1398431490716",
-  //   image: "string",
-  //   name: "rahul",
-  //   email: "rahul@gmail.com",
-  //   password: "rahul",
-  //   current_coins: 5,
-  //   total_coins: 23,
-  //   tenacious: 1,
-  //   resourceful: 1,
-  //   open_minded: 3,
-  //   problem_solving: 4,
-  //   holistic: 0,
-  //   inquisitive: 50,
-  //   celebrating: 7,
-  //   reset_date: "18-10-2023",
-  // });
-  // d.save();
-  // res.send("ok");
-};
+const getLogin = async (req, res) => {};
 
 module.exports = { userLogin, getLogin };
