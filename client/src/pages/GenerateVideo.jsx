@@ -15,7 +15,7 @@ function GenerateVideo() {
         <PromptInputField />
       </div>
       <div className={styles["generated-videos"]}>
-        <VideoGroup />
+        <VideoGroup data={[]} />
       </div>
     </div>
   );

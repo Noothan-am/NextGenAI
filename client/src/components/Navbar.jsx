@@ -16,9 +16,9 @@ function Navbar() {
           <li>
             <Link to={`/hello`}>Generate</Link>
           </li>
-          <li>
+          {/* <li>
             <Link to={`/hello`}>Custom Videos</Link>
-          </li>
+          </li> */}
         </ul>
       </div>
     </div>

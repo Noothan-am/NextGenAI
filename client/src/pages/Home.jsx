@@ -4,8 +4,13 @@ import PromptInputField from "../components/PromptInputField";
 import VideoContainer from "../components/VideoContainer";
 import VideoGroup from "../components/VideoGroup";
 import styles from "../styles/home.module.css";
+const video1 = require("../assets/Dog.mp4");
+const video2 = require("../assets/women.mp4");
+const video3 = require("../assets/cat.mp4");
+const video4 = require("../assets/hero.mp4");
 
 function Home() {
+  const data = [video1, video2, video3, video4];
   return (
     <div className={styles["home"]}>
       <Navbar />
@@ -27,7 +32,7 @@ function Home() {
           Text-to-Video Generator
         </p>
         <div className={styles["home-video-group"]}>
-          <VideoGroup />
+          <VideoGroup data={data} />
         </div>
         {/* <VideoContainer />
         <Login />

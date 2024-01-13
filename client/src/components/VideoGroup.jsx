@@ -1,15 +1,12 @@
 import React from "react";
 import styles from "../styles/video-group.module.css";
 import VideoContainer from "./VideoContainer";
-function VideoGroup() {
+function VideoGroup({ data }) {
   return (
     <div className={styles["video-placeholders"]}>
-      {/* {["1", "2", "3", "4"].map((number) => ( */}
-      <VideoContainer videoUrl={require("../assets/Dog.mp4")} />
-      <VideoContainer videoUrl={require("../assets/women.mp4")} />
-      <VideoContainer videoUrl={require("../assets/cat.mp4")} />
-      <VideoContainer videoUrl={require("../assets/women.mp4")} />
-      {/* ))} */}
+      {data.map((video, index) => (
+        <VideoContainer key={index} videoUrl={video} />
+      ))}
     </div>
   );
 }
