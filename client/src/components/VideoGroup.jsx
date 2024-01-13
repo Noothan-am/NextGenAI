@@ -6,7 +6,9 @@ function VideoGroup() {
     <div className={styles["video-placeholders"]}>
       {/* {["1", "2", "3", "4"].map((number) => ( */}
       <VideoContainer videoUrl={require("../assets/Dog.mp4")} />
-      <VideoContainer videoUrl={require("../assets/nature.mp4")} />
+      <VideoContainer videoUrl={require("../assets/women.mp4")} />
+      <VideoContainer videoUrl={require("../assets/cat.mp4")} />
+      <VideoContainer videoUrl={require("../assets/women.mp4")} />
       {/* ))} */}
     </div>
   );
