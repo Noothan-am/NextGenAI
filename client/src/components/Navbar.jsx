@@ -6,7 +6,7 @@ function Navbar() {
   return (
     <div className={styles["navbar"]}>
       <div className={styles["navbar-left"]}>
-        <h1>NextGen AI</h1>
+        <h3>NextGen AI</h3>
       </div>
       <div className={styles["navbar-right"]}>
         <ul>
@@ -16,9 +16,9 @@ function Navbar() {
           <li>
             <Link to={`/hello`}>Generate</Link>
           </li>
-          {/* <li>
-            <Link to={`/hello`}>Custom Videos</Link>
-          </li> */}
+          <li>
+            <Link to={`/custom-video`}>Custom Videos</Link>
+          </li>
         </ul>
       </div>
     </div>

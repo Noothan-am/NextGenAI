@@ -1,7 +1,6 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import PromptInputField from "../components/PromptInputField";
-import VideoContainer from "../components/VideoContainer";
 import VideoGroup from "../components/VideoGroup";
 import styles from "../styles/home.module.css";
 const video1 = require("../assets/Dog.mp4");
@@ -34,9 +33,6 @@ function Home() {
         <div className={styles["home-video-group"]}>
           <VideoGroup data={data} />
         </div>
-        {/* <VideoContainer />
-        <Login />
-        <Signup /> */}
       </section>
     </div>
   );

@@ -4,7 +4,7 @@ import styles from "../styles/video-container.module.css";
 function VideoContainer({ videoUrl }) {
   return (
     <div className={styles["video-placeholder"]}>
-      <video width={450} height={300} controls src={videoUrl}></video>
+      <video width={450} height={300} autoplay controls src={videoUrl}></video>
     </div>
   );
 }
