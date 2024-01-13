@@ -3,10 +3,6 @@ require("./connection/connection");
 const express = require("express");
 const cors = require("cors");
 const authRouter = require("./routes/auth-router");
-const coinsRouter = require("./routes/coins-router");
-const profileRouter = require("./routes/profile-router");
-const transactionRouter = require("./routes/transaction-router");
-const adminRouter = require("./routes/admin-router");
 
 const app = express();
 const port = process.env.PORT || 8000;
@@ -19,10 +15,6 @@ app.use(
   })
 );
 app.use(authRouter);
-app.use(coinsRouter);
-app.use(profileRouter);
-app.use(transactionRouter);
-app.use(adminRouter);
 
 app.listen(port, () => {
   console.log(`Server listening at http://localhost:${port}`);
