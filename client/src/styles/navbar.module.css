@@ -1,0 +1,25 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #00a79d;
+  padding: 10px 50px;
+}
+
+.navbar-left h1 {
+  color: white;
+}
+
+.navbar-right ul {
+  list-style-type: none;
+}
+
+.navbar-right li {
+  display: inline-block;
+  margin-left: 20px;
+  color: white;
+}
+.navbar-right li a {
+  color: white;
+  text-decoration: none;
+}
