@@ -11,12 +11,14 @@ function CustomVideo() {
     prompt: "",
   });
   const [rawData, setRaw] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   const handleGenerate = async () => {
+    setLoading(true);
     console.log(optionsValue);
     try {
       const response = await axios.post(
-        "https://059e-34-124-233-78.ngrok-free.app/api/generate-video/",
+        "https://8cf1-34-27-255-248.ngrok-free.app/api/generate-video/",
         {
           audio: optionsValue.audio,
           length: optionsValue.length,
@@ -34,11 +36,13 @@ function CustomVideo() {
       if (response.status === 200) {
         const base64Data = response.data;
         setRaw(base64Data);
+        setLoading(true);
       }
     } catch (error) {
       console.error("Error generating video:", error);
     }
   };
+
   return (
     <div className={styles["custom-video"]}>
       <Navbar />
