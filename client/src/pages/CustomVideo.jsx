@@ -1,26 +1,86 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "../components/Navbar";
 import styles from "../styles/custom-video.module.css";
 import Options from "../components/Options";
+import axios from "axios";
+
 function CustomVideo() {
+  const [optionsValue, setOptionsValue] = useState({
+    subtitles: false,
+    audio: false,
+    length: 2,
+    prompt: "",
+  });
+  const [rawData, setRaw] = useState(null);
+
+  const handleGenerate = async () => {
+    console.log(optionsValue);
+    try {
+      const response = await axios.post(
+        "https://944f-34-170-146-209.ngrok-free.app/api/generate-video/",
+        {
+          data: JSON.stringify({
+            subtitles: false,
+            audio: false,
+            length: 2,
+            prompt: "",
+          }),
+        },
+        {
+          responseType: "json",
+          headers: {
+            "ngrok-skip-browser-warning": "true",
+            "Content-Type": "application/json; charset=utf-8",
+            "Access-Control-Allow-Origin": "*",
+          },
+        }
+      );
+      if (response.status === 200) {
+        const base64Data = response.data;
+        setRaw(base64Data);
+      }
+    } catch (error) {
+      console.error("Error generating video:", error);
+    }
+  };
   return (
     <div className={styles["custom-video"]}>
       <Navbar />
       <section className={styles["video-controls"]}>
         <div className={styles["container"]}>
           <textarea
+            onChange={(e) =>
+              setOptionsValue({ ...optionsValue, prompt: e.target.value })
+            }
+            value={optionsValue.prompt}
             className={styles["story-input"]}
             placeholder="Enter Your Story Here"
           />
-          <button className={styles["generate-button"]}>Generate</button>
+          <button
+            onClick={handleGenerate}
+            className={styles["generate-button"]}
+          >
+            Generate
+          </button>
         </div>
         <div className={styles["select-options"]}>
-          <Options />
+          <Options
+            optionsValue={optionsValue}
+            setOptionsValue={setOptionsValue}
+          />
         </div>
       </section>
       <section className={styles["generated-video"]}>
         <h1>Your Generated Video </h1>
-        <div className={styles["video-placeholder"]}>Generated Video</div>
+        <div className={styles["video-placeholder"]}>
+          {rawData && (
+            <video
+              className={styles["video"]}
+              src={rawData ? rawData.toString() : ""}
+              controls
+            />
+          )}
+        </div>
       </section>
     </div>
   );
