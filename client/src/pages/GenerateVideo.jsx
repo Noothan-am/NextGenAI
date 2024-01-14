@@ -29,8 +29,10 @@ function GenerateVideo() {
     const enhancedPrompt = await enhancePrompt(prompt);
     try {
       const response = await axios.post(
-        "https://944f-34-170-146-209.ngrok-free.app/api/generate-video/",
+        "https://76a4-34-136-54-131.ngrok-free.app/api/generate-video/",
         {
+          audio: true,
+          length: 3,
           prompt: enhancedPrompt,
         },
         {

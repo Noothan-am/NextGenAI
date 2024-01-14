@@ -11,7 +11,7 @@ function Navbar() {
       <div className={styles["navbar-right"]}>
         <ul>
           <li>
-            <Link to={`/`}>Home</Link>
+            <Link to={`/home`}>Home</Link>
           </li>
           <li>
             <Link to={`/hello`}>Generate</Link>

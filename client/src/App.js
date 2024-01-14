@@ -9,7 +9,8 @@ import Signup from "./pages/Signup";
 function App() {
   return (
     <Routes>
-      <Route path="*" element={<Home />} />
+      <Route path="/" element={<Login />} />
+      <Route path="/home" element={<Home />} />
       <Route path="/hello" element={<GenerateVideo />} />
       <Route path="/custom-video" element={<CustomVideo />} />
       <Route path="/login" element={<Login />} />

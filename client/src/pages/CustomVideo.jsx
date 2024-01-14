@@ -6,7 +6,6 @@ import axios from "axios";
 
 function CustomVideo() {
   const [optionsValue, setOptionsValue] = useState({
-    subtitles: false,
     audio: false,
     length: 2,
     prompt: "",
@@ -17,14 +16,11 @@ function CustomVideo() {
     console.log(optionsValue);
     try {
       const response = await axios.post(
-        "https://944f-34-170-146-209.ngrok-free.app/api/generate-video/",
+        "https://059e-34-124-233-78.ngrok-free.app/api/generate-video/",
         {
-          data: JSON.stringify({
-            subtitles: false,
-            audio: false,
-            length: 2,
-            prompt: "",
-          }),
+          audio: optionsValue.audio,
+          length: optionsValue.length,
+          prompt: optionsValue.prompt,
         },
         {
           responseType: "json",

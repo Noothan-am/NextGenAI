@@ -3,16 +3,22 @@
   height: 100vh;
   display: flex;
   justify-content: center;
+  color: white;
   align-items: center;
 }
-
+a {
+  color: white;
+  text-decoration: none;
+}
 .login-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 20px;
+  text-align: start;
   border: 1px solid #000;
+  color: white;
 }
 
 .input-fields input {

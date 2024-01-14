@@ -1,12 +1,9 @@
 import React from "react";
 import styles from "../styles/button.module.css";
-function Button() {
-  const handleButtonClick = () => {
-    console.log("Button clicked!");
-  };
+function Button({ handleClick, value }) {
   return (
-    <button className={styles["login-button"]} onClick={handleButtonClick}>
-      Login
+    <button onClick={handleClick} className={styles["login-button"]}>
+      {value}
     </button>
   );
 }

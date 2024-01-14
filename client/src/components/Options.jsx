@@ -10,17 +10,7 @@ function Options({ setOptionsValue, optionsValue }) {
   return (
     <div className={styles["menu"]}>
       <div className={styles["menu-heading"]}>Select Options</div>
-      <button
-        onClick={() =>
-          setOptionsValue({
-            ...optionsValue,
-            subtitles: !optionsValue.subtitles,
-          })
-        }
-        className={styles["menu-button"]}
-      >
-        Subtitles
-      </button>
+
       <button
         onClick={() =>
           setOptionsValue({
