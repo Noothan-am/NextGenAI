@@ -1,12 +1,10 @@
+require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
-const gTTS = require("gtts");
-const fs = require("fs");
-const path = require("path");
-const { exec } = require("child_process");
-
 const app = express();
 const port = process.env.PORT || 8000;
+require("./connection/connection");
+const authRouter = require("./routes/auth-router");
 
 app.use(express.json());
 app.use(
@@ -15,8 +13,7 @@ app.use(
     methods: ["GET", "POST", "PUT", "DELETE"],
   })
 );
-
-app.get("/hello", (req, res) => {});
+app.use(authRouter);
 
 app.listen(port, () => {
   console.log(`Server listening at http://localhost:${port}`);
