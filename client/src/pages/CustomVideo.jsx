@@ -71,6 +71,8 @@ function CustomVideo() {
         <div className={styles["video-placeholder"]}>
           {rawData && (
             <video
+              height={550}
+              width={"100%"}
               className={styles["video"]}
               src={rawData ? rawData.toString() : ""}
               controls

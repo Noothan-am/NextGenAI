@@ -1,6 +1,5 @@
 import React from "react";
 import Navbar from "../components/Navbar";
-import PromptInputField from "../components/PromptInputField";
 import VideoGroup from "../components/VideoGroup";
 import styles from "../styles/home.module.css";
 const video1 = require("../assets/Dog.mp4");
@@ -17,9 +16,7 @@ function Home() {
       <Navbar />
       <section className={styles["hero"]}>
         <h1>Revolutionizing Content Creation through Innovative AI Models</h1>
-        <div className={styles["home-prompt"]}>
-          {/* <PromptInputField /> */}
-        </div>
+        <div className={styles["home-prompt"]}></div>
         <p>
           Create awe-inspiring masterpieces effortlessly and explore the endless
           possibilities of AI generated art. Enter a prompt, choose a style, and
